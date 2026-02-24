@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeKangaroo — Terms of Service</title>
+    <link rel="icon" type="image/png" href="kangaroo_app_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+    --black: #1A1A1A;
+    --white: #fff;
+    --beige: #D1B389;
+    --beige-dark: #B8975F;
+    --cream: #FAF6F0;
+    --cream-dark: #EDE5D8;
+    --gray: #7A7A7A;
+    --gray-light: #A8A8A8;
+    --gold: #CFB58A;
+    --gold-light: #E8D9BF;
+    --gold-dark: #B89B6A;
+    --text-secondary: #5a5a5a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: var(--black); background: var(--white); overflow-x: hidden; }
+
+/* NAV */
+nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(207,181,138,0.2);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    transition: all 0.4s;
+}
+.nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    height: 70px; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none; color: var(--black);
+}
+.nav-logo img { width: 38px; height: 38px; border-radius: 10px; }
+.nav-logo span { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+.nav-links { display: flex; gap: 8px; align-items: center; }
+.nav-links a {
+    text-decoration: none; padding: 8px 16px; border-radius: 8px;
+    font-weight: 500; font-size: 0.9rem;
+    color: var(--text-secondary); transition: all 0.3s;
+}
+.nav-links a:hover { color: var(--black); background: var(--cream); }
+.nav-links a.active { color: var(--gold-dark); background: var(--cream); }
+.nav-dl {
+    text-decoration: none; padding: 9px 22px; border-radius: 100px;
+    font-weight: 600; font-size: 0.82rem;
+    background: var(--beige); color: var(--white); transition: all 0.3s;
+}
+.nav-dl:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+/* FOOTER */
+footer { padding: 28px 32px; background: var(--black); text-align: center; }
+.f-logo { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px; }
+.f-logo img { width: 22px; height: 22px; border-radius: 6px; }
+.f-logo span { font-weight: 700; font-size: 0.9rem; color: var(--white); }
+footer p { color: rgba(255,255,255,0.25); font-size: 0.72rem; line-height: 1.6; }
+footer a { color: var(--beige); text-decoration: none; }
+
+/* HAMBURGER */
+.nav-hamburger {
+    display: none; background: none; border: none; cursor: pointer; padding: 8px;
+    flex-direction: column; gap: 5px; z-index: 1001;
+}
+.nav-hamburger span {
+    display: block; width: 22px; height: 2px; background: var(--black);
+    border-radius: 2px; transition: all 0.3s;
+}
+.nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.active span:nth-child(2) { opacity: 0; }
+.nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+@media (max-width: 768px) {
+    .nav-inner { height: 56px; position: relative; }
+    .nav-logo img { width: 32px; height: 32px; }
+    .nav-logo span { font-size: 0.95rem; }
+    .nav-hamburger { display: flex; }
+    .nav-links {
+        display: none; position: absolute; top: 56px; right: 16px;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        flex-direction: column; padding: 8px 0;
+        min-width: 180px; z-index: 1000;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { color: var(--black) !important; font-size: 0.9rem; padding: 10px 20px; }
+    .nav-links a:hover { background: var(--cream); }
+    .nav-dl { display: none; }
+    .nav-links .nav-dl-mobile {
+        display: block; margin: 4px 12px 8px; padding: 10px 20px; border-radius: 100px;
+        background: var(--beige); color: var(--white) !important; text-decoration: none;
+        font-weight: 600; font-size: 0.85rem; text-align: center;
+    }
+    .legal-section { padding: 80px 20px 48px; }
+    .legal-section h2 { font-size: 1.5rem; }
+    .legal-section h3 { font-size: 1.1rem; }
+}
+
+.legal-section {
+    max-width: 780px; margin: 0 auto; padding: 100px 32px 80px;
+}
+.legal-header { margin-bottom: 40px; }
+.legal-section h2 {
+    font-family: 'Playfair Display', serif; font-weight: 800;
+    font-size: 2rem; letter-spacing: -0.02em; color: var(--black); margin-bottom: 8px;
+}
+.legal-section .updated { font-size: 0.85rem; color: var(--text-secondary); }
+.legal-section h3 {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    font-size: 1.25rem; margin-top: 40px; margin-bottom: 12px;
+    letter-spacing: -0.01em; color: var(--black);
+}
+.legal-section h4 {
+    font-family: 'Playfair Display', serif; font-weight: 700;
+    font-size: 1.05rem; margin-top: 24px; margin-bottom: 8px; color: var(--black);
+}
+.legal-section p { font-size: 0.92rem; line-height: 1.75; color: #444; margin-bottom: 12px; }
+.legal-section ul { list-style: none; padding: 0; margin: 12px 0 16px; }
+.legal-section ul li {
+    position: relative; padding-left: 20px; margin-bottom: 8px;
+    font-size: 0.9rem; line-height: 1.7; color: #444;
+}
+.legal-section ul li::before {
+    content: ''; position: absolute; left: 0; top: 10px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
+}
+.legal-section a {
+    color: var(--gold-dark); text-decoration: underline;
+    text-decoration-color: rgba(184,155,106,0.3); text-underline-offset: 2px;
+}
+.legal-section a:hover { text-decoration-color: var(--gold-dark); }
+.legal-section .disclaimer,.legal-section .caps {
+    font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em;
+    font-weight: 600; color: var(--text-secondary); margin-top: 24px;
+}
+.legal-section strong { font-weight: 600; color: var(--black); }
+.back-to-top {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 40px; padding: 10px 20px; border-radius: 100px;
+    background: var(--cream); color: var(--gold-dark);
+    font-weight: 600; font-size: 0.82rem; text-decoration: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.04); transition: all 0.2s;
+}
+.back-to-top:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
+.back-to-top svg { width: 14px; height: 14px; }
+
+@media (max-width: 768px) {
+    .legal-section { padding: 80px 20px 48px; }
+    .legal-section h2 { font-size: 1.5rem; }
+    .legal-section h3 { font-size: 1.1rem; }
+}
+
+    </style>
+</head>
+<body>
+    <nav id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></a>
+        <div class="nav-links" id="navLinks">
+            <a href="terms.html" class="active">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+            <a href="#" class="nav-dl-mobile">App Store</a>
+        </div>
+        <a href="#" class="nav-dl">App Store</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+<section class="legal-section" id="terms">
+  <div class="legal-header">
+    <h2>Terms of Service</h2>
+    <p class="updated">Last Updated: February 20, 2026</p>
+  </div>
+
+  <h3>1. Agreement to Terms</h3>
+  <p>These Terms of Service (&ldquo;Terms&rdquo;) constitute a legally binding agreement between you (&ldquo;User,&rdquo; &ldquo;you,&rdquo; or &ldquo;your&rdquo;) and Kangaroo LLC, a Wisconsin limited liability company (&ldquo;Kangaroo,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), governing your access to and use of the Kangaroo mobile application (the &ldquo;App&rdquo;). By creating an account or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree, do not use the App.</p>
+
+  <h3>2. Eligibility</h3>
+  <p><strong>Age Requirement:</strong> You must be at least 18 years of age to create an account and use Kangaroo. By using the App and its payment features, you represent and warrant that you are at least 18 years old. If you misrepresent your age, you are responsible for any consequences that result.</p>
+  <p><strong>University Email Verification:</strong> Access to the App is restricted to users with a valid email address from a supported university. Currently supported domains are @cornell.edu, @ucsb.edu, and @smu.edu. Kangaroo does not guarantee that every user with a supported email address is a currently enrolled student, and possession of a university email does not constitute verification of student status.</p>
+  <p><strong>Account Restrictions:</strong> You may only create one account. Accounts are non-transferable. Kangaroo reserves the right to refuse service or restrict access at its sole discretion.</p>
+
+  <h3>3. Account and Profile</h3>
+  <p>When you create an account, you agree to provide accurate and complete information, including your real name. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.</p>
+  <p>Your username must be unique within your university and may only contain letters, numbers, periods, and underscores (3&ndash;20 characters). Kangaroo reserves the right to require you to change your username if it violates these Terms or is deemed inappropriate.</p>
+  <p>Profile information you provide&mdash;including your name, bio, school, dorm, location, and gender&mdash;may be visible to other users at your university. You may select &ldquo;Prefer not to answer&rdquo; for gender.</p>
+
+  <h3>4. How Kangaroo Works</h3>
+  <p>Kangaroo is a peer-to-peer platform that connects university students for three types of transactions:</p>
+  <ul>
+    <li><strong>Requests:</strong> A user posts a task they need help with and sets a price. Another user accepts and completes the task.</li>
+    <li><strong>Offers:</strong> A user offers a service (including rides, errands, tutoring, lending, and more) at a set price. Another user accepts the offer.</li>
+    <li><strong>Marketplace:</strong> A user lists an item for sale. Another user purchases the item.</li>
+  </ul>
+  <p>Kangaroo is a platform only. We facilitate connections and process payments but do not employ, endorse, or supervise any user. We are not a party to any transaction between users and make no representations about the quality, safety, legality, or suitability of any listing, service, or item.</p>
+
+  <h3>5. User Conduct</h3>
+  <p>You agree to use Kangaroo lawfully and respectfully. The following conduct is prohibited:</p>
+  <ul>
+    <li>Posting harmful, threatening, abusive, defamatory, obscene, or fraudulent content.</li>
+    <li>Harassment, intimidation, or discrimination against other users.</li>
+    <li>Impersonation or misrepresentation of your identity.</li>
+    <li>Using the platform for any illegal purpose.</li>
+    <li>Attempting to circumvent platform fees or payment systems.</li>
+    <li>Creating multiple accounts or using another user&rsquo;s account.</li>
+    <li>Manipulating ratings, reviews, or transaction history.</li>
+    <li>Interfering with the operation of the App or its infrastructure.</li>
+  </ul>
+  <p>Violations may result in warnings, posting restrictions, suspension, or permanent account termination at Kangaroo&rsquo;s sole discretion.</p>
+
+  <h3>6. Academic Integrity</h3>
+  <p>Kangaroo prohibits any use of the platform that violates university academic integrity policies. You may not use Kangaroo to hire others for contract cheating, including but not limited to: taking exams, writing papers or essays, completing homework assignments, or any other form of academic dishonesty.</p>
+  <p>Listings that appear to facilitate academic dishonesty may be removed without notice, and accounts involved may be restricted or terminated.</p>
+
+  <h3>7. Prohibited Items and Services</h3>
+  <p>The following items and services may not be listed, sold, or exchanged on Kangaroo:</p>
+  <ul>
+    <li>Weapons, firearms, ammunition, or explosives.</li>
+    <li>Illegal drugs, controlled substances, or drug paraphernalia.</li>
+    <li>Alcohol or tobacco products.</li>
+    <li>Stolen, counterfeit, or unlicensed goods.</li>
+    <li>Prescription medications.</li>
+    <li>Hazardous materials.</li>
+    <li>Items that infringe on intellectual property rights.</li>
+    <li>Sexually explicit content or services.</li>
+    <li>Any item or service that is illegal under federal, state, or local law.</li>
+  </ul>
+  <p>Kangaroo reserves the right to remove any listing and restrict any account that violates these prohibitions.</p>
+
+  <h3>8. Payments, Fees, and Stripe</h3>
+
+  <h4>8.1 Payment Processing</h4>
+  <p>All payments on Kangaroo are processed through Stripe, Inc. (&ldquo;Stripe&rdquo;). By using Kangaroo&rsquo;s payment features, you agree to be bound by the <a href="https://stripe.com/legal/connect-account" target="_blank" rel="noopener">Stripe Connected Account Agreement</a>, which includes the <a href="https://stripe.com/legal/ssa" target="_blank" rel="noopener">Stripe Terms of Service</a> (collectively, the &ldquo;Stripe Services Agreement&rdquo;). By facilitating a transaction, you authorize Kangaroo to share your information and transaction data with Stripe for the purposes of processing payments and managing your account.</p>
+
+  <h4>8.2 Service Fees</h4>
+  <p>Kangaroo charges a service fee on transactions to cover platform maintenance, payment processing, and operational costs. The applicable fee is displayed before you confirm any transaction. Fee rates may vary by listing type and are subject to change. Kangaroo will provide notice of material fee changes within the App. Service fees are non-refundable except in cases where a dispute is resolved in your favor.</p>
+
+  <h4>8.3 Additional Charges</h4>
+  <p>Certain transactions may involve additional charges beyond the base listing price:</p>
+  <ul>
+    <li><strong>Receipt Reimbursement:</strong> For tasks that require purchases (e.g., grocery runs), the helper may upload a receipt for reimbursement. The requester will be charged the receipt amount plus applicable processing fees.</li>
+    <li><strong>Delivery Fees:</strong> Marketplace sellers may charge a delivery fee, which is disclosed before the buyer confirms the transaction.</li>
+    <li><strong>Lost/Damaged Fees:</strong> For borrowing and lending transactions, a lost/damaged fee may be agreed upon. If an item is lost or damaged, the agreed-upon fee will be charged to the borrower. See Section 10 for details.</li>
+  </ul>
+
+  <h4>8.4 Payouts and Withdrawals</h4>
+  <p>To receive payouts, you must complete Stripe Connect onboarding, which requires providing personal information including your legal name, date of birth, address, and bank account details to Stripe. This information is processed by Stripe in accordance with the Stripe Privacy Policy.</p>
+  <p>Withdrawals from your Kangaroo earnings require a minimum of $5.00. Payout timing is subject to Stripe&rsquo;s standard processing schedule. Kangaroo does not guarantee specific payout timelines.</p>
+
+  <h4>8.5 Payment Authorization</h4>
+  <p>By saving a payment method to your account, you authorize Kangaroo to charge that payment method for transactions you initiate or accept, including base prices, service fees, receipt reimbursements, delivery fees, and lost/damaged fees. You may be asked to confirm charges via biometric authentication (Face ID or Touch ID) or device passcode depending on your settings.</p>
+
+  <h3>9. Negotiations</h3>
+  <p>Users may negotiate the price of a listing before accepting it. Negotiations take place within the App and are subject to the following rules: for Requests, the proposed price may not be lower than the listed price; for Offers and Marketplace items, the proposed price may not exceed the listed price. Once a negotiated price is accepted by both parties and the transaction begins, the agreed-upon price is binding.</p>
+
+  <h3>10. Borrowing and Lending</h3>
+  <p>Certain Requests (category: Borrowing) and Offers (category: Lending) involve the temporary exchange of physical items. The following terms apply:</p>
+  <ul>
+    <li>Lenders may propose or set a lost/damaged fee before the transaction begins. Borrowers must agree to this fee before the transaction is activated.</li>
+    <li>If an item is lost or damaged, the lender may report it through the App. The agreed-upon lost/damaged fee will be charged to the borrower&rsquo;s saved payment method.</li>
+    <li>Kangaroo does not inspect, appraise, or insure items. Users are solely responsible for the condition, value, and return of borrowed items.</li>
+    <li>Disputes regarding item condition are handled through Kangaroo&rsquo;s dispute resolution process (see Section 14).</li>
+  </ul>
+
+  <h3>11. Specific Activity Disclaimers</h3>
+
+  <h4>11.1 Rides</h4>
+  <p>Kangaroo facilitates cost-sharing between users for ride-related Offers. Kangaroo is not a transportation company and does not provide commercial transportation services. Users offering rides represent and warrant that they possess a valid driver&rsquo;s license and active personal auto insurance that covers passengers. Kangaroo does not perform background checks, vehicle inspections, or verify insurance coverage. Users participate in rides entirely at their own risk.</p>
+
+  <h4>11.2 Errands and Deliveries</h4>
+  <p>Users who accept errands or delivery tasks do so as independent individuals, not as employees or agents of Kangaroo. Kangaroo is not responsible for the timeliness, accuracy, or quality of any errand or delivery.</p>
+
+  <h3>12. Cancellations</h3>
+  <p>Transactions may be cancelled under the following conditions:</p>
+  <ul>
+    <li><strong>Grace Period:</strong> After a transaction begins, either party may cancel within the applicable grace period. Grace periods vary depending on the listing type and timing urgency. Cancellations within the grace period result in a full refund.</li>
+    <li><strong>After Grace Period:</strong> If the grace period has passed, cancellation requires mutual agreement. Either party may request cancellation, and the other party has 24 hours to accept or decline.</li>
+    <li><strong>Declined Cancellations:</strong> If a cancellation request is declined, the requesting party may file a dispute (see Section 14).</li>
+  </ul>
+  <p>Refunds for cancelled transactions are processed within 5&ndash;10 business days, depending on your payment provider.</p>
+
+  <h3>13. Listings</h3>
+  <p>All listings have an expiration time set by the creator. Expired listings are automatically removed from the feed. Users may also pause or delete their own listings at any time.</p>
+  <p>Kangaroo reserves the right to remove any listing that violates these Terms, contains prohibited content, or is otherwise deemed inappropriate, without prior notice.</p>
+  <p>Listings may be targeted by audience (e.g., dorm, school, location, or gender). Audience targeting is intended for relevance and user comfort. Kangaroo reserves the right to remove listings that use targeting features to discriminate against protected classes.</p>
+
+  <h3>14. Disputes and Complaints</h3>
+
+  <h4>14.1 In-App Dispute Resolution</h4>
+  <p>If you have an issue with a transaction, you may file a dispute through the App. The other party will have an opportunity to respond. Kangaroo administration will review the dispute and make a determination. Possible outcomes include: full refund to the payer, release of payment to the earner, a split of the disputed amount, or no action.</p>
+  <p>All decisions made by Kangaroo administration regarding disputes are final and binding. Kangaroo serves as the sole and final arbiter of all transaction disputes within the platform.</p>
+
+  <h4>14.2 Reporting and Blocking</h4>
+  <p>Users may report other users or content for harassment, spam, inappropriate content, scam or fraud, safety concerns, or other violations. Users may also block other users, which prevents all future interaction between the parties. Reports are reviewed by Kangaroo administration, which may take action including warnings, restrictions, or account termination.</p>
+
+  <h3>15. Account Restrictions and Termination</h3>
+  <p>Kangaroo may impose restrictions on your account at its sole discretion. Restrictions may include, but are not limited to:</p>
+  <ul>
+    <li>Warnings (visible on your account).</li>
+    <li>Limitations on posting new listings.</li>
+    <li>Limitations on accepting listings.</li>
+    <li>Limitations on withdrawing funds.</li>
+    <li>Required actions (e.g., changing your username, updating payment information).</li>
+    <li>Temporary suspension.</li>
+    <li>Permanent ban.</li>
+  </ul>
+  <p>Restrictions may be time-limited or permanent. You may request a review of any restriction through the App. Kangaroo&rsquo;s determination on restriction reviews is final.</p>
+
+  <h3>16. Account Deletion</h3>
+  <p>You may delete your account at any time through the App&rsquo;s Settings. Account deletion is subject to the following conditions:</p>
+  <ul>
+    <li>You must have no active transactions or open disputes at the time of deletion.</li>
+    <li>Any unredeemed earnings or wallet balance will be forfeited upon account deletion. You are responsible for withdrawing available funds before deleting your account.</li>
+    <li>Your profile will be anonymized. Your name and personal information will be removed and replaced with &ldquo;Deleted User.&rdquo;</li>
+    <li>Transaction records, chat histories, and ratings involving other users will be retained in anonymized form so the other party&rsquo;s records remain intact.</li>
+    <li>Images you uploaded (profile photos, chat images, receipts) will be permanently deleted.</li>
+    <li>Your Stripe Customer and Connect accounts will be deactivated.</li>
+    <li>Your Firebase authentication credentials will be permanently deleted.</li>
+  </ul>
+  <p>Account deletion is permanent and cannot be undone.</p>
+
+  <h3>17. Intellectual Property</h3>
+
+  <h4>17.1 Kangaroo&rsquo;s IP</h4>
+  <p>The App, including its design, code, logos, trademarks, and content created by Kangaroo, is the property of Kangaroo LLC and is protected by applicable intellectual property laws. You may not copy, modify, distribute, or create derivative works from any part of the App without our prior written consent.</p>
+
+  <h4>17.2 User Content</h4>
+  <p>You retain ownership of content you create and post on Kangaroo (listings, messages, images, reviews). However, by posting content on the App, you grant Kangaroo a non-exclusive, worldwide, royalty-free, transferable license to use, display, reproduce, and distribute your content solely for the purpose of operating and providing the App. This license terminates when your content is deleted or your account is removed, except for anonymized records retained per Section 16.</p>
+
+  <h3>18. Limitation of Liability</h3>
+  <p class="caps">KANGAROO IS PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+  <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, KANGAROO LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+  <ul>
+    <li>Your use of or inability to use the App.</li>
+    <li>Any transaction or interaction between you and another user.</li>
+    <li>Any content posted by users on the App.</li>
+    <li>Unauthorized access to or alteration of your data.</li>
+    <li>Any third-party conduct on the App.</li>
+  </ul>
+  <p class="caps">IN NO EVENT SHALL KANGAROO LLC&rsquo;S TOTAL LIABILITY TO YOU EXCEED THE GREATER OF (A) THE AMOUNT OF FEES PAID BY YOU TO KANGAROO IN THE TWELVE (12) MONTHS PRIOR TO THE CLAIM, OR (B) ONE HUNDRED DOLLARS ($100).</p>
+
+  <h3>19. Indemnification</h3>
+  <p>You agree to indemnify, defend, and hold harmless Kangaroo LLC, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys&rsquo; fees) arising out of or in any way connected with: (a) your use of the App; (b) your violation of these Terms; (c) your violation of any applicable law or regulation; or (d) your content or transactions with other users.</p>
+
+  <h3>20. Dispute Resolution and Arbitration</h3>
+
+  <h4>20.1 Informal Resolution</h4>
+  <p>Before initiating any formal dispute, you agree to first contact Kangaroo at <a href="mailto:support@collegekangaroo.com">support@collegekangaroo.com</a> and attempt to resolve the dispute informally for at least 30 days.</p>
+
+  <h4>20.2 Binding Arbitration</h4>
+  <p>If the dispute cannot be resolved informally, all disputes arising out of or relating to these Terms or the use of the App shall be resolved through binding individual arbitration, conducted in the State of Wisconsin, in accordance with the rules of a mutually agreed-upon arbitration provider. If the parties cannot agree on a provider, arbitration shall proceed under the rules of the American Arbitration Association (AAA).</p>
+
+  <h4>20.3 Class Action Waiver</h4>
+  <p class="caps">YOU AND KANGAROO LLC AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE PROCEEDING. You expressly waive any right to participate in a class action lawsuit or class-wide arbitration.</p>
+
+  <h4>20.4 Exceptions</h4>
+  <p>Either party may bring an individual action in small claims court for disputes within the court&rsquo;s jurisdictional limits.</p>
+
+  <h3>21. Governing Law</h3>
+  <p>These Terms shall be governed by and construed in accordance with the laws of the State of Wisconsin, without regard to its conflict of law provisions.</p>
+
+  <h3>22. Changes to Terms</h3>
+  <p>Kangaroo reserves the right to modify these Terms at any time. We will notify you of material changes through the App or by other reasonable means. Your continued use of the App after the effective date of any changes constitutes your acceptance of the updated Terms. If you do not agree with any changes, you must stop using the App and delete your account.</p>
+
+  <h3>23. Contact Information</h3>
+  <p>If you have questions about these Terms, please contact us at:</p>
+  <p>Kangaroo LLC<br><a href="mailto:support@collegekangaroo.com">support@collegekangaroo.com</a></p>
+</section>
+
+
+    <div style="text-align:center; padding: 0 32px 60px;">
+        <a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+            Back to top
+        </a>
+    </div>
+
+    <footer>
+        <div class="f-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></div>
+        <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="contact.html">Contact</a><br>&copy; 2026 CollegeKangaroo</p>
+    </footer>
+
+    <script>
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('open');
+        });
+    });
+    </script>
+</body>
+</html>
