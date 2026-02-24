@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — CollegeKangaroo</title>
+    <link rel="icon" type="image/png" href="kangaroo_app_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #1A1A1A;
+            --white: #fff;
+            --beige: #D1B389;
+            --beige-dark: #B8975F;
+            --cream: #FAF6F0;
+            --cream-dark: #EDE5D8;
+            --gray: #7A7A7A;
+            --gray-light: #A8A8A8;
+            --gold: #CFB58A;
+            --gold-light: #E8D9BF;
+            --gold-dark: #B89B6A;
+            --text-secondary: #5a5a5a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--black); background: var(--white); }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(207,181,138,0.2);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 24px;
+            height: 70px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 12px;
+            text-decoration: none; color: var(--black); transition: color 0.4s;
+        }
+        .nav-logo img { width: 38px; height: 38px; border-radius: 10px; }
+        .nav-logo span { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+        .nav-links { display: flex; gap: 8px; align-items: center; }
+        .nav-links a {
+            text-decoration: none; padding: 8px 16px; border-radius: 8px;
+            font-weight: 500; font-size: 0.9rem;
+            color: var(--text-secondary); transition: all 0.3s;
+        }
+        .nav-links a:hover { color: var(--black); background: var(--cream); }
+        .nav-dl {
+            text-decoration: none; padding: 9px 22px; border-radius: 100px;
+            font-weight: 600; font-size: 0.82rem;
+            background: var(--beige); color: var(--white); transition: all 0.3s;
+        }
+        .nav-dl:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+        /* HAMBURGER */
+        .nav-hamburger {
+            display: none; background: none; border: none; cursor: pointer; padding: 8px;
+            flex-direction: column; gap: 5px; z-index: 1001;
+        }
+        .nav-hamburger span {
+            display: block; width: 22px; height: 2px; background: var(--black);
+            border-radius: 2px; transition: all 0.3s;
+        }
+        .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        @media (max-width: 768px) {
+            .nav-inner { height: 56px; position: relative; }
+            .nav-logo img { width: 32px; height: 32px; }
+            .nav-logo span { font-size: 0.95rem; }
+            .nav-hamburger { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 56px; right: 16px;
+                background: var(--white);
+                border-radius: 12px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+                flex-direction: column; padding: 8px 0;
+                min-width: 180px; z-index: 1000;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { color: var(--black) !important; font-size: 0.9rem; padding: 10px 20px; }
+            .nav-links a:hover { background: var(--cream); }
+            .nav-dl { display: none; }
+            .nav-links .nav-dl-mobile {
+                display: block; margin: 4px 12px 8px; padding: 10px 20px; border-radius: 100px;
+                background: var(--beige); color: var(--white); text-decoration: none;
+                font-weight: 600; font-size: 0.85rem; text-align: center;
+            }
+        }
+
+        /* CONTENT */
+        .page-content {
+            max-width: 600px; margin: 0 auto; padding: 140px 24px 80px;
+            text-align: center;
+        }
+        .page-content h1 {
+            font-family: 'Playfair Display', serif; font-weight: 900;
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem); letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+        .page-content p {
+            color: var(--gray); font-size: 1rem; line-height: 1.7; margin-bottom: 24px;
+        }
+        .email-link {
+            display: inline-block; padding: 14px 32px; border-radius: 100px;
+            background: var(--beige); color: var(--white); text-decoration: none;
+            font-weight: 600; font-size: 1rem; transition: all 0.3s;
+        }
+        .email-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+
+        /* FOOTER */
+        footer { padding: 28px 32px; background: var(--black); text-align: center; }
+        .f-logo { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px; }
+        .f-logo img { width: 22px; height: 22px; border-radius: 6px; }
+        .f-logo span { font-weight: 700; font-size: 0.9rem; color: var(--white); }
+        footer p { color: rgba(255,255,255,0.25); font-size: 0.72rem; line-height: 1.6; }
+        footer a { color: var(--beige); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></a>
+        <div class="nav-links" id="navLinks">
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact</a>
+            <a href="#" class="nav-dl-mobile">App Store</a>
+        </div>
+        <a href="#" class="nav-dl">App Store</a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-content">
+        <h1>Contact Us</h1>
+        <p>Have a question, suggestion, or just want to say hi? Reach out and we'll get back to you as soon as we can.</p>
+        <a href="mailto:support@collegekangaroo.com" class="email-link">support@collegekangaroo.com</a>
+    </div>
+
+    <footer>
+        <div class="f-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></div>
+        <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="contact.html">Contact</a><br>&copy; 2026 CollegeKangaroo</p>
+    </footer>
+
+    <script>
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('open');
+        });
+    });
+    </script>
+</body>
+</html>
