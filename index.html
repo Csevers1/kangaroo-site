@@ -162,6 +162,80 @@
         .steps-stripe p { font-size: 0.85rem; color: var(--gray); }
         .steps-stripe span { font-weight: 700; color: var(--black); }
 
+        /* FEEDBACK */
+        .feedback {
+            padding: 76px 32px;
+            background: linear-gradient(180deg, var(--cream) 0%, #f4ecdf 100%);
+        }
+        .feedback-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 42px 36px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.78);
+            border: 1px solid rgba(184,155,106,0.18);
+            box-shadow: 0 18px 45px rgba(82, 60, 34, 0.08);
+            text-align: center;
+        }
+        .feedback-inner h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+        .feedback-inner p {
+            max-width: 620px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+            font-size: 0.96rem;
+            line-height: 1.7;
+        }
+        .feedback-actions {
+            margin-top: 24px;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .feedback-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-width: 220px;
+            padding: 14px 24px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+        }
+        .feedback-btn-primary {
+            background: var(--black);
+            color: var(--white);
+            box-shadow: 0 10px 28px rgba(26,26,26,0.14);
+        }
+        .feedback-btn-secondary {
+            background: transparent;
+            color: var(--black);
+            border: 1px solid rgba(184,155,106,0.36);
+        }
+        .feedback-btn:hover {
+            transform: translateY(-2px);
+        }
+        .feedback-btn-primary:hover {
+            box-shadow: 0 14px 32px rgba(26,26,26,0.18);
+        }
+        .feedback-btn-secondary:hover {
+            background: rgba(255,255,255,0.85);
+        }
+        .feedback-note {
+            margin-top: 14px;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
         /* TRUST */
         .trust { padding: 48px 32px; background: var(--beige); text-align: center; }
         .trust h3 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--white); letter-spacing: -0.02em; line-height: 1.4; max-width: 460px; margin: 0 auto; }
@@ -174,6 +248,18 @@
         .f-logo span { font-weight: 700; font-size: 0.9rem; color: var(--white); }
         footer p { color: rgba(255,255,255,0.25); font-size: 0.72rem; line-height: 1.6; }
         footer a { color: var(--beige); text-decoration: none; }
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .footer-feedback {
+            display: inline-flex;
+            color: rgba(255,255,255,0.72);
+            font-size: 0.78rem;
+        }
 
         /* HAMBURGER */
         .nav-hamburger {
@@ -224,6 +310,10 @@
             .use-cases h4, .use-cases .use-sub { text-align: center; }
             .steps { padding: 56px 20px; }
             .steps-grid { gap: 24px; }
+            .feedback { padding: 56px 20px; }
+            .feedback-inner { padding: 34px 24px; border-radius: 24px; }
+            .feedback-actions { flex-direction: column; }
+            .feedback-btn { width: 100%; min-width: 0; }
         }
     </style>
 </head>
@@ -233,12 +323,14 @@
       <div class="nav-inner">
         <a href="#" class="nav-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></a>
         <div class="nav-links" id="navLinks">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8aYRHTCZ_c4bFfoEW6-XLADNkBM9uG_KnfSGdqk9Ad0AFug/viewform?usp=sf_link" target="_blank" rel="noopener">Feedback</a>
+            <a href="https://www.instagram.com/collegekangaroo?igsh=MTZ6aHYxZ3lmNjlsdw%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
             <a href="terms.html">Terms</a>
             <a href="privacy.html">Privacy</a>
             <a href="contact.html">Contact</a>
-            <a href="#" class="nav-dl-mobile">App Store</a>
+            <a href="https://apps.apple.com/us/app/college-kangaroo/id6759514715" class="nav-dl-mobile" target="_blank" rel="noopener">App Store</a>
         </div>
-        <a href="#" class="nav-dl">App Store</a>
+        <a href="https://apps.apple.com/us/app/college-kangaroo/id6759514715" class="nav-dl" target="_blank" rel="noopener">App Store</a>
         <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
@@ -253,7 +345,7 @@
             <img src="kangaroo_app_icon.png" alt="Kangaroo" class="hero-icon">
             <h1>Your campus.<br><em>Your economy.</em></h1>
             <p class="hero-sub">The peer-to-peer platform built for campus life.</p>
-            <a href="#" class="hero-btn">
+            <a href="https://apps.apple.com/us/app/college-kangaroo/id6759514715" class="hero-btn" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
                 Download on the App Store
             </a>
@@ -373,6 +465,20 @@
         </div>
     </section>
 
+    <!-- FEEDBACK -->
+    <section class="feedback">
+        <div class="feedback-inner">
+            <span class="label">Help Shape Kangaroo</span>
+            <h2>Request your campus. Share feedback. Tell us what to build next.</h2>
+            <p>Have an idea, found friction, or want CollegeKangaroo at your school? Send us a quick note. We read every submission and use it to decide what we improve next.</p>
+            <div class="feedback-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8aYRHTCZ_c4bFfoEW6-XLADNkBM9uG_KnfSGdqk9Ad0AFug/viewform?usp=sf_link" class="feedback-btn feedback-btn-primary" target="_blank" rel="noopener">Request Your Campus</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8aYRHTCZ_c4bFfoEW6-XLADNkBM9uG_KnfSGdqk9Ad0AFug/viewform?usp=sf_link" class="feedback-btn feedback-btn-secondary" target="_blank" rel="noopener">Share Product Feedback</a>
+            </div>
+            <div class="feedback-note">Fast, simple, and student-friendly.</div>
+        </div>
+    </section>
+
     <!-- TRUST -->
     <section class="trust">
         <h3>Not strangers. Fellow students. Same campus. Real accountability.</h3>
@@ -383,6 +489,10 @@
     <footer>
         <div class="f-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></div>
         <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="contact.html">Contact</a><br>&copy; 2026 CollegeKangaroo</p>
+        <div class="footer-links">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8aYRHTCZ_c4bFfoEW6-XLADNkBM9uG_KnfSGdqk9Ad0AFug/viewform?usp=sf_link" class="footer-feedback" target="_blank" rel="noopener">Request your campus or send feedback</a>
+            <a href="https://www.instagram.com/collegekangaroo?igsh=MTZ6aHYxZ3lmNjlsdw%3D%3D&utm_source=qr" class="footer-feedback" target="_blank" rel="noopener">Follow on Instagram</a>
+        </div>
     </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
