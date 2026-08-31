@@ -144,59 +144,51 @@
         .how-header { text-align: center; margin-bottom: 28px; }
         .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--beige); margin-bottom: 10px; display: block; }
         .how-header h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(1.7rem, 3.2vw, 2.3rem); letter-spacing: -0.03em; }
-        /* CATEGORY GRID — colors mirror the in-app category cards */
+        /* CATEGORY GRID — no card chrome; colors mirror the in-app category cards */
         .cat-grid {
             display: grid; grid-template-columns: repeat(2, 1fr);
-            gap: 22px; max-width: 1060px; margin: 0 auto;
+            gap: 56px 64px; max-width: 1120px; margin: 0 auto;
         }
-        .cat {
-            display: flex; flex-direction: column; align-items: stretch; gap: 18px;
-            padding: 24px; border-radius: 22px;
-            background:
-                linear-gradient(155deg, var(--cat-tint) 0%, rgba(255,255,255,0) 62%),
-                var(--white);
-            border: 1px solid var(--cat-line);
-            box-shadow: 0 2px 16px rgba(0,0,0,0.045);
-        }
-        .cat-marketplace { --cat: #22B24C; --cat-tint: rgba(34,178,76,0.16);  --cat-line: rgba(34,178,76,0.22); }
-        .cat-jobs        { --cat: #F5871F; --cat-tint: rgba(245,135,31,0.16); --cat-line: rgba(245,135,31,0.24); }
-        .cat-rides       { --cat: #1E7FE8; --cat-tint: rgba(30,127,232,0.14); --cat-line: rgba(30,127,232,0.22); }
-        .cat-academia    { --cat: #C42EC8; --cat-tint: rgba(196,46,200,0.14); --cat-line: rgba(196,46,200,0.22); }
+        .cat { display: flex; flex-direction: column; align-items: flex-start; }
+        .cat-marketplace { --cat: #22B24C; --cat-tint: rgba(34,178,76,0.16);  --cat-line: rgba(34,178,76,0.30); }
+        .cat-jobs        { --cat: #F5871F; --cat-tint: rgba(245,135,31,0.16); --cat-line: rgba(245,135,31,0.32); }
+        .cat-rides       { --cat: #1E7FE8; --cat-tint: rgba(30,127,232,0.14); --cat-line: rgba(30,127,232,0.30); }
+        .cat-academia    { --cat: #C42EC8; --cat-tint: rgba(196,46,200,0.14); --cat-line: rgba(196,46,200,0.30); }
 
-        .cat-media { flex-shrink: 0; align-self: center; }
+        .cat-head { display: flex; align-items: center; gap: 13px; margin-bottom: 6px; }
+        .cat-ico {
+            width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+            background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .cat-ico svg { width: 21px; height: 21px; color: var(--cat); }
+        .cat-head h3 {
+            font-family: 'Playfair Display', serif; font-weight: 900;
+            font-size: 1.85rem; letter-spacing: -0.03em; line-height: 1.1;
+        }
+        .cat-rule { width: 46px; height: 3px; border-radius: 3px; background: var(--cat); margin-bottom: 20px; }
+
         .cat-frame {
-            width: 142px; aspect-ratio: 1 / 2;
+            width: 156px; aspect-ratio: 1 / 2; margin-bottom: 20px;
             border-radius: 18px; overflow: hidden;
             background: var(--white);
-            box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+            box-shadow: 0 8px 26px rgba(0,0,0,0.11);
             display: flex; align-items: center; justify-content: center;
         }
         .cat-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
         /* placeholder until the real screenshot lands */
         .cat-frame.is-placeholder { background: var(--cat-tint); box-shadow: inset 0 0 0 1px var(--cat-line); }
-        .cat-frame.is-placeholder svg { width: 40px; height: 40px; color: var(--cat); opacity: 0.5; }
+        .cat-frame.is-placeholder svg { width: 42px; height: 42px; color: var(--cat); opacity: 0.5; }
 
-        .cat-body { flex: 1; min-width: 0; }
-        .cat-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .cat-ico {
-            width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
-            background: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .cat-ico svg { width: 18px; height: 18px; color: var(--cat); }
-        .cat-head h3 {
-            font-family: 'Playfair Display', serif; font-weight: 800;
-            font-size: 1.2rem; letter-spacing: -0.01em;
-        }
-        .cat-body > p { font-size: 0.845rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px; }
-        .cat-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+        .cat > p { font-size: 0.875rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 16px; }
+        .cat-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
         .cat-list li {
-            position: relative; padding-left: 16px;
-            font-size: 0.8rem; line-height: 1.45; color: var(--black);
+            position: relative; padding-left: 17px;
+            font-size: 0.82rem; line-height: 1.45; color: var(--black);
         }
         .cat-list li::before {
             content: ''; position: absolute; left: 0; top: 7px;
-            width: 6px; height: 6px; border-radius: 50%; background: var(--cat); opacity: 0.75;
+            width: 6px; height: 6px; border-radius: 50%; background: var(--cat); opacity: 0.85;
         }
 
         /* STEPS SECTION */
@@ -394,10 +386,10 @@
             .hero-pills { gap: 6px; }
             .hero-pill { font-size: 0.7rem; padding: 5px 11px; }
             .how { padding: 56px 20px 40px; }
-            .cat-grid { grid-template-columns: 1fr; gap: 18px; }
-            .cat { gap: 16px; padding: 20px; }
-            .cat-frame { width: 132px; }
-            .cat-head h3 { font-size: 1.1rem; }
+            .cat-grid { grid-template-columns: 1fr; gap: 44px; }
+            .cat-head h3 { font-size: 1.55rem; }
+            .cat-ico { width: 38px; height: 38px; }
+            .cat-frame { width: 140px; }
             .steps { padding: 56px 20px; }
             .steps-grid { gap: 24px; }
             .feedback { padding: 56px 20px; }
@@ -459,64 +451,52 @@
 
             <div class="cat-grid">
                 <div class="cat cat-marketplace">
-                    <div class="cat-media">
-                        <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
-                    </div>
-                    <div class="cat-body">
-                        <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h3>Marketplace</h3></div>
-                        <p>Buy and sell with students on your own campus. You get the convenience of dealing with someone who probably lives minutes away, and who shares your schedule and your necessities. Semester&rsquo;s over and you&rsquo;ll never use that calculator again? Sell it to someone who needs it next semester. Moving out? Sell the furniture and appliances instead of dragging them to a dumpster. Fellow students, not random people. Safe, easy, and secure.</p>
-                        <ul class="cat-list">
+                    <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h3>Marketplace</h3></div>
+                    <div class="cat-rule"></div>
+                    <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+                    <p>Buy and sell with students on your own campus. You get the convenience of dealing with someone who probably lives minutes away, and who shares your schedule and your necessities. Semester&rsquo;s over and you&rsquo;ll never use that calculator again? Sell it to someone who needs it next semester. Moving out? Sell the furniture and appliances instead of dragging them to a dumpster. Fellow students, not random people. Safe, easy, and secure.</p>
+                    <ul class="cat-list">
                             <li>Textbooks and course materials</li>
                             <li>Game tickets and event passes</li>
                             <li>Clothes, electronics, and everyday gear</li>
                             <li>Anything you&rsquo;re still looking for &mdash; post it and let sellers come to you</li>
                         </ul>
-                    </div>
                 </div>
                 <div class="cat cat-jobs">
-                    <div class="cat-media">
-                        <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-                    </div>
-                    <div class="cat-body">
-                        <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Jobs</h3></div>
-                        <p>Jobs makes it easy to get things done around campus. Post what you need help with, set a price, and connect with another student who can take care of it for you. From everyday errands to the times you just need an extra pair of hands, it&rsquo;s a simple way to save time and get help from people in your own campus community. And when you have time to spare, you can pick up jobs yourself.</p>
-                        <ul class="cat-list">
+                    <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Jobs</h3></div>
+                    <div class="cat-rule"></div>
+                    <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                    <p>Jobs makes it easy to get things done around campus. Post what you need help with, set a price, and connect with another student who can take care of it for you. From everyday errands to the times you just need an extra pair of hands, it&rsquo;s a simple way to save time and get help from people in your own campus community. And when you have time to spare, you can pick up jobs yourself.</p>
+                    <ul class="cat-list">
                             <li>Furniture assembly and heavy lifting</li>
                             <li>Dog walking, pet sitting, and plant watering</li>
                             <li>Errands, pickups, and drop-offs</li>
                             <li>Photography, haircuts, and DJing</li>
                         </ul>
-                    </div>
                 </div>
                 <div class="cat cat-rides">
-                    <div class="cat-media">
-                        <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div>
-                    </div>
-                    <div class="cat-body">
-                        <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div><h3>Rides</h3></div>
-                        <p>Kangaroo isn&rsquo;t trying to replace Uber or Lyft. It&rsquo;s for the trips they don&rsquo;t really cover &mdash; heading home for fall break, getting to the airport, making the drive into the city. Post where you&rsquo;re going and find students from your own campus making the same trip. Already driving? Take someone with you and split the cost of the drive. The goal is simple: make getting around more accessible for everyone on campus.</p>
-                        <ul class="cat-list">
+                    <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div><h3>Rides</h3></div>
+                    <div class="cat-rule"></div>
+                    <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div>
+                    <p>Kangaroo isn&rsquo;t trying to replace Uber or Lyft. It&rsquo;s for the trips they don&rsquo;t really cover &mdash; heading home for fall break, getting to the airport, making the drive into the city. Post where you&rsquo;re going and find students from your own campus making the same trip. Already driving? Take someone with you and split the cost of the drive. The goal is simple: make getting around more accessible for everyone on campus.</p>
+                    <ul class="cat-list">
                             <li>Airport runs at the start and end of break</li>
                             <li>Weekend trips home</li>
                             <li>Trips into the city</li>
                             <li>Getting to games and events off campus</li>
                         </ul>
-                    </div>
                 </div>
                 <div class="cat cat-academia">
-                    <div class="cat-media">
-                        <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div>
-                    </div>
-                    <div class="cat-body">
-                        <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div><h3>Academia</h3></div>
-                        <p>The best person to help you with a class is usually someone who just took it. Academia connects you with students on your campus who&rsquo;ve had the same course, the same professor, and the same exams. Post exactly what you need help with &mdash; one concept, one chapter, one exam &mdash; set a price, and get help fast from someone who&rsquo;s already been through it. And if you aced a class, you can help someone else do the same.</p>
-                        <ul class="cat-list">
+                    <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div><h3>Academia</h3></div>
+                    <div class="cat-rule"></div>
+                    <div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div>
+                    <p>The best person to help you with a class is usually someone who just took it. Academia connects you with students on your campus who&rsquo;ve had the same course, the same professor, and the same exams. Post exactly what you need help with &mdash; one concept, one chapter, one exam &mdash; set a price, and get help fast from someone who&rsquo;s already been through it. And if you aced a class, you can help someone else do the same.</p>
+                    <ul class="cat-list">
                             <li>Tutoring and study help</li>
                             <li>Notes and study guides</li>
                             <li>Exam and finals prep</li>
                             <li>Essay and application review</li>
                         </ul>
-                    </div>
                 </div>
             </div>
         </div>
