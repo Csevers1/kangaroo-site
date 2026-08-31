@@ -143,6 +143,21 @@
         .how-header { text-align: center; margin-bottom: 28px; }
         .label { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--beige); margin-bottom: 10px; display: block; }
         .how-header h2 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(1.7rem, 3.2vw, 2.3rem); letter-spacing: -0.03em; }
+        /* WHAT IS KANGAROO */
+        .intro { padding: 92px 32px 84px; background: var(--white); text-align: center; }
+        .intro-inner { max-width: 680px; margin: 0 auto; }
+        .intro h2 {
+            font-family: 'Playfair Display', serif; font-weight: 900;
+            font-size: clamp(1.75rem, 3.4vw, 2.5rem); letter-spacing: -0.03em;
+            line-height: 1.12; margin-bottom: 20px;
+        }
+        .intro p { font-size: 1rem; line-height: 1.75; color: var(--text-secondary); }
+        .intro-goal {
+            margin-top: 26px; padding-top: 24px;
+            border-top: 1px solid rgba(184,155,106,0.28);
+            color: var(--black) !important; font-weight: 500;
+        }
+
         /* CATEGORY ROWS — full-width alternating bands, no card chrome */
         .cat-grid { max-width: 1060px; margin: 0 auto; display: flex; flex-direction: column; gap: 92px; }
         .cat {
@@ -422,6 +437,8 @@
             .cat-list { grid-template-columns: 1fr; }
             .steps { padding: 56px 20px; }
             .steps-grid { gap: 24px; }
+            .intro { padding: 60px 20px 56px; }
+            .intro p { font-size: 0.95rem; }
             .join { padding: 56px 20px; }
             .join-btn { width: 100%; justify-content: center; }
             .feedback { padding: 56px 20px; }
@@ -468,6 +485,16 @@
             </div>
         </div>
         <a href="#how" class="hero-scroll"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+    </section>
+
+    <!-- WHAT IS KANGAROO -->
+    <section class="intro">
+        <div class="intro-inner">
+            <span class="label">What is Kangaroo</span>
+            <h2>Your campus already has an economy.</h2>
+            <p>Students are constantly buying and selling, asking for help, splitting rides, and looking for someone who&rsquo;s already taken the class. It just happens in group chats, on flyers, and through whoever happens to know whoever. Kangaroo gives all of it one place to happen &mdash; real profiles, prices agreed up front, and payments handled in the app.</p>
+            <p class="intro-goal">Our goal is to make it easy to get what you need from the people already around you.</p>
+        </div>
     </section>
 
     <!-- HOW IT WORKS -->
