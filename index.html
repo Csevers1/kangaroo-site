@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CollegeKangaroo — Your Campus. Your Economy.</title>
-    <link rel="icon" type="image/png" href="kangaroo_app_icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <meta name="description" content="CollegeKangaroo is the peer-to-peer marketplace built for campus life. Request help, offer services, and buy or sell with students on your own campus. Every payment secured by Stripe.">
+    <link rel="canonical" href="https://www.collegekangaroo.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeKangaroo">
+    <meta property="og:title" content="CollegeKangaroo — Your Campus. Your Economy.">
+    <meta property="og:description" content="CollegeKangaroo is the peer-to-peer marketplace built for campus life. Request help, offer services, and buy or sell with students on your own campus. Every payment secured by Stripe.">
+    <meta property="og:url" content="https://www.collegekangaroo.com/">
+    <meta property="og:image" content="https://www.collegekangaroo.com/og_image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CollegeKangaroo — your campus, your economy.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CollegeKangaroo — Your Campus. Your Economy.">
+    <meta name="twitter:description" content="CollegeKangaroo is the peer-to-peer marketplace built for campus life. Request help, offer services, and buy or sell with students on your own campus. Every payment secured by Stripe.">
+    <meta name="twitter:image" content="https://www.collegekangaroo.com/og_image.jpg">
+
+    <meta name="theme-color" content="#1A1A1A">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -91,6 +117,27 @@
         @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(7px); } }
         @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+        /* SCROLL REVEAL — gated on .js-reveal so content stays visible without JS */
+        .js-reveal .bul, .js-reveal .phone-col, .js-reveal .step {
+            opacity: 0; transform: translateY(18px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .js-reveal .bul.in-view, .js-reveal .phone-col.in-view, .js-reveal .step.in-view {
+            opacity: 1; transform: translateY(0);
+        }
+        .js-reveal .bul:nth-child(2),  .js-reveal .step:nth-child(2) { transition-delay: 0.08s; }
+        .js-reveal .bul:nth-child(3),  .js-reveal .step:nth-child(3) { transition-delay: 0.16s; }
+        .js-reveal .bul:nth-child(4),  .js-reveal .step:nth-child(4) { transition-delay: 0.24s; }
+        .js-reveal .phone-col:nth-child(2) { transition-delay: 0.12s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .js-reveal .bul, .js-reveal .phone-col, .js-reveal .step {
+                opacity: 1; transform: none; transition: none;
+            }
+            .hero-icon, .hero h1, .hero-sub, .hero-btn, .hero-schools,
+            .hero-scroll, .hero-pill .dot { animation: none; }
+        }
 
         /* HOW IT WORKS */
         .how { padding: 80px 32px 48px; background: var(--cream); }
@@ -333,12 +380,13 @@
             .feedback-btn { width: 100%; min-width: 0; }
         }
     </style>
+    <script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 <body>
 
     <nav id="nav">
       <div class="nav-inner">
-        <a href="#" class="nav-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></a>
+        <a href="#top" class="nav-logo"><img src="kangaroo_icon_192.png" alt="K"><span>CollegeKangaroo</span></a>
         <div class="nav-links" id="navLinks">
             <a href="terms.html">Terms</a>
             <a href="privacy.html">Privacy</a>
@@ -355,7 +403,7 @@
         <video autoplay muted loop playsinline webkit-playsinline poster="hero_poster.jpg"><source src="81452-576317109_medium.mp4" type="video/mp4"></video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <img src="kangaroo_app_icon.png" alt="Kangaroo" class="hero-icon">
+            <img src="kangaroo_icon_192.png" alt="Kangaroo" class="hero-icon">
             <h1>Your campus.<br><em>Your economy.</em></h1>
             <p class="hero-sub">The peer-to-peer platform built for campus life.</p>
             <a href="https://apps.apple.com/us/app/college-kangaroo/id6759514715" class="hero-btn" target="_blank" rel="noopener">
@@ -503,7 +551,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="f-logo"><img src="kangaroo_app_icon.png" alt="K"><span>CollegeKangaroo</span></div>
+        <div class="f-logo"><img src="kangaroo_icon_192.png" alt="K"><span>CollegeKangaroo</span></div>
         <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="contact.html">Contact</a><br>&copy; 2026 CollegeKangaroo</p>
         <div class="footer-links">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8aYRHTCZ_c4bFfoEW6-XLADNkBM9uG_KnfSGdqk9Ad0AFug/viewform?usp=sf_link" class="footer-feedback" target="_blank" rel="noopener">Request your campus or send feedback</a>
@@ -511,7 +559,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
     // Redirect old anchor links to new pages
     if (window.location.hash === '#terms') { window.location.href = 'terms.html'; }
     if (window.location.hash === '#privacy') { window.location.href = 'privacy.html'; }
@@ -549,11 +597,23 @@
         });
     }
 
-    // Scroll animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); } });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.step, .phone-col, .bul').forEach(el => observer.observe(el));
+    // Scroll animations. The CSS hides these until .in-view lands, so every failure
+    // path below has to end with the content visible rather than stuck at opacity 0.
+    const revealTargets = document.querySelectorAll('.step, .phone-col, .bul');
+    const revealAll = () => revealTargets.forEach(el => el.classList.add('in-view'));
+
+    if (!('IntersectionObserver' in window)) {
+        revealAll();
+    } else {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }
+            });
+        }, { threshold: 0.15 });
+        revealTargets.forEach(el => observer.observe(el));
+        // Safety net: if the observer never reports anything, show the content anyway.
+        setTimeout(() => { if (!document.querySelector('.in-view')) revealAll(); }, 3000);
+    }
     </script>
 </body>
 </html>
