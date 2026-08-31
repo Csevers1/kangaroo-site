@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+._*
+
+# Local tooling
+.claude/worktrees/
+
+# Original 1440p hero master — kept locally for future re-encodes
+hero_source_original.mp4
