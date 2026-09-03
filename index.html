@@ -72,8 +72,8 @@
             text-decoration: none; color: var(--white); transition: color 0.4s;
         }
         nav.scrolled .nav-logo { color: var(--black); }
-        .nav-logo img { width: 38px; height: 38px; border-radius: 10px; }
-        .nav-logo span { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+        .nav-logo img { display: block; width: 174px; height: auto; content: url("wordmarkwhite.png"); }
+        nav.scrolled .nav-logo img { content: url("wordmarkblack.png"); }
         .nav-links { display: flex; gap: 8px; align-items: center; }
         .nav-links a {
             text-decoration: none; padding: 8px 16px; border-radius: 8px;
@@ -368,8 +368,7 @@
         /* FOOTER */
         footer { padding: 28px 32px; background: var(--black); text-align: center; }
         .f-logo { display: flex; align-items: center; gap: 8px; justify-content: center; margin-bottom: 8px; }
-        .f-logo img { width: 22px; height: 22px; border-radius: 6px; }
-        .f-logo span { font-weight: 700; font-size: 0.9rem; color: var(--white); }
+        .f-logo img { display: block; width: 142px; height: auto; }
         footer p { color: rgba(255,255,255,0.25); font-size: 0.72rem; line-height: 1.6; }
         footer a { color: var(--beige); text-decoration: none; }
         .footer-links {
@@ -402,8 +401,7 @@
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .nav-inner { height: 56px; position: relative; }
-            .nav-logo img { width: 32px; height: 32px; }
-            .nav-logo span { font-size: 0.95rem; }
+            .nav-logo img { width: 146px; height: auto; }
             .nav-hamburger { display: flex; }
             .nav-links {
                 display: none; position: absolute; top: 56px; right: 16px;
@@ -454,7 +452,7 @@
 
     <nav id="nav">
       <div class="nav-inner">
-        <a href="#top" class="nav-logo"><img src="kangaroo_icon_192.png" alt="K"><span>CollegeKangaroo</span></a>
+        <a href="#top" class="nav-logo"><img src="wordmarkwhite.png" alt="CollegeKangaroo"></a>
         <div class="nav-links" id="navLinks">
             <a href="terms.html">Terms</a>
             <a href="privacy.html">Privacy</a>
@@ -647,7 +645,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="f-logo"><img src="kangaroo_icon_192.png" alt="K"><span>CollegeKangaroo</span></div>
+        <div class="f-logo"><img src="wordmarkwhite.png" alt="CollegeKangaroo"></div>
         <p><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="contact.html">Contact</a><br>&copy; 2026 CollegeKangaroo</p>
         <div class="footer-links">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8aYRHTCZ_c4bFfoEW6-XLADNkBM9uG_KnfSGdqk9Ad0AFug/viewform?usp=sf_link" class="footer-feedback" target="_blank" rel="noopener">Request your campus or send feedback</a>
