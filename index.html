@@ -196,7 +196,8 @@
             box-shadow: 0 14px 40px rgba(0,0,0,0.13);
             display: flex; align-items: center; justify-content: center;
         }
-        .cat-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .cat-frame img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; display: block; }
+        /* bottom anchor keeps the app's tab bar intact and crops the phone status bar off cleanly */
         .cat-frame.is-placeholder { background: var(--cat-tint); box-shadow: inset 0 0 0 1px var(--cat-line); }
         .cat-frame.is-placeholder svg { width: 56px; height: 56px; color: var(--cat); opacity: 0.45; }
 
@@ -506,7 +507,7 @@
 
             <div class="cat-grid">
                 <div class="cat cat-marketplace">
-                    <div class="cat-media"><div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div></div>
+                    <div class="cat-media"><div class="cat-frame"><img src="marketplace_screen.jpg" alt="The Kangaroo Marketplace feed showing student listings for furniture, clothing and textbooks" width="639" height="1391" loading="lazy" decoding="async"></div></div>
                     <div class="cat-copy">
                         <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><h3><span class="cat-num">1.</span>Marketplace</h3></div>
                         <div class="cat-rule"></div>
@@ -520,7 +521,7 @@
                     </div>
                 </div>
                 <div class="cat cat-jobs">
-                    <div class="cat-media"><div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div></div>
+                    <div class="cat-media"><div class="cat-frame"><img src="jobs_screen.jpg" alt="The Kangaroo Jobs feed showing student posts offering and requesting help with campus tasks" width="639" height="1391" loading="lazy" decoding="async"></div></div>
                     <div class="cat-copy">
                         <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3><span class="cat-num">2.</span>Jobs</h3></div>
                         <div class="cat-rule"></div>
@@ -534,7 +535,7 @@
                     </div>
                 </div>
                 <div class="cat cat-rides">
-                    <div class="cat-media"><div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div></div>
+                    <div class="cat-media"><div class="cat-frame"><img src="rides_screen.jpg" alt="The Kangaroo Rides feed showing students offering and requesting rides to the city and airport" width="639" height="1391" loading="lazy" decoding="async"></div></div>
                     <div class="cat-copy">
                         <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div><h3><span class="cat-num">3.</span>Rides</h3></div>
                         <div class="cat-rule"></div>
@@ -548,7 +549,7 @@
                     </div>
                 </div>
                 <div class="cat cat-academia">
-                    <div class="cat-media"><div class="cat-frame is-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div></div>
+                    <div class="cat-media"><div class="cat-frame"><img src="academia_screen.jpg" alt="The Kangaroo Academia feed showing students offering and requesting course tutoring" width="639" height="1391" loading="lazy" decoding="async"></div></div>
                     <div class="cat-copy">
                         <div class="cat-head"><div class="cat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div><h3><span class="cat-num">4.</span>Academia</h3></div>
                         <div class="cat-rule"></div>
