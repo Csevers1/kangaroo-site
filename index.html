@@ -190,14 +190,14 @@
         .cat-rule { width: 52px; height: 3px; border-radius: 3px; background: var(--cat); margin-bottom: 22px; }
 
         .cat-frame {
-            width: 260px; aspect-ratio: 1 / 2;
+            width: 260px; aspect-ratio: 639 / 1391;
             border-radius: 26px; overflow: hidden;
             background: var(--white);
             box-shadow: 0 14px 40px rgba(0,0,0,0.13);
             display: flex; align-items: center; justify-content: center;
         }
-        .cat-frame img { width: 100%; height: 100%; object-fit: cover; object-position: bottom; display: block; }
-        /* bottom anchor keeps the app's tab bar intact and crops the phone status bar off cleanly */
+        .cat-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+        /* Match the source screenshots' exact aspect ratio so neither edge is cropped. */
         .cat-frame.is-placeholder { background: var(--cat-tint); box-shadow: inset 0 0 0 1px var(--cat-line); }
         .cat-frame.is-placeholder svg { width: 56px; height: 56px; color: var(--cat); opacity: 0.45; }
 
