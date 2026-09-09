@@ -98,7 +98,7 @@
         .hero video::-webkit-media-controls-start-playback-button { display: none !important; opacity: 0 !important; }
         .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.7)); z-index: 1; }
         .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 24px; }
-        .hero-icon { width: 68px; height: 68px; border-radius: 18px; margin-bottom: 20px; box-shadow: 0 8px 28px rgba(0,0,0,0.3); animation: fadeUp 0.7s ease 0.2s both; }
+        .hero-icon { width: clamp(104px, 11vw, 152px); height: auto; margin-bottom: 20px; filter: drop-shadow(0 6px 22px rgba(0,0,0,0.45)); animation: fadeUp 0.7s ease 0.2s both; }
         .hero h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(2.8rem, 6.5vw, 4.8rem); color: var(--white); line-height: 1.05; letter-spacing: -0.03em; animation: fadeUp 0.7s ease 0.35s both; }
         .hero h1 em { color: var(--beige); font-style: italic; }
         .hero-sub { color: rgba(255,255,255,0.7); font-size: clamp(0.9rem, 1.6vw, 1.08rem); margin-top: 12px; margin-bottom: 24px; animation: fadeUp 0.7s ease 0.5s both; }
@@ -470,7 +470,7 @@
         <video autoplay muted loop playsinline webkit-playsinline poster="hero_poster.jpg"><source src="hero.mp4" type="video/mp4"></video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <img src="kangaroo_icon_192.png" alt="Kangaroo" class="hero-icon">
+            <img src="kangaroo_mark.png" alt="Kangaroo" class="hero-icon">
             <h1>Your campus.<br><em>Your economy.</em></h1>
             <p class="hero-sub">The peer-to-peer platform built for campus life.</p>
             <a href="https://apps.apple.com/us/app/college-kangaroo/id6759514715" class="hero-btn" target="_blank" rel="noopener">
